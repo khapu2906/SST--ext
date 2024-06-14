@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Ultron",
+  "version": "0.1.0",
+  "description": "Ultron For World Peace",
+  "permissions": ["tabs", "webRequest"],
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": [
+        "build/content-scripts.js"
+      ],
+      "css": ["assets/css/style.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Ultron"
+  },
+  "icons": {
+    "16": "assets/images/ez-ultron-logo.png",
+    "48": "assets/images/ez-ultron-logo.png",
+    "64": "assets/images/ez-ultron-logo.png",
+    "128": "assets/images/ez-ultron-logo.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["microphone-svgrepo-com.svg"],
+      "matches": ["https://*/*"]
+    }
+  ]
+}
